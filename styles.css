@@ -1,26 +1,39 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   text-align: center;
 }
 
-#grid {
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 5px;
-  max-width: 300px;
-  margin: 20px auto;
+  grid-template-columns: repeat(10, 32px);
+  gap: 4px;
+  margin: 10px;
 }
 
 .cell {
-  width: 100%;
-  padding-top: 100%;
-  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  text-transform: uppercase;
 }
 
-.cell input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 18px;
+#bricks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 320px;
+}
+
+.brick {
+  border: 1px solid black;
+  padding: 6px;
+  margin: 4px;
+  background: #eee;
+  cursor: grab;
 }
