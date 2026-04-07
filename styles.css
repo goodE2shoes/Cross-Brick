@@ -1,0 +1,6 @@
+body {font-family: Arial;text-align:center;}
+#board {display:grid;grid-template-columns:repeat(10,32px);gap:4px;justify-content:center;margin:10px;}
+.cell {width:32px;height:32px;border:1px solid black;text-align:center;font-size:18px;}
+.block {background:black;}
+#bricks {display:flex;flex-wrap:wrap;justify-content:center;}
+.brick {padding:6px;border:1px solid black;margin:4px;background:#ddd;}
