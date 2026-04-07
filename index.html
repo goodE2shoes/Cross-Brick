@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross‑Brick Puzzle</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cross-Brick</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-<header class="puzzle-header">
-    <h1>PUZZLE 131</h1>
-    <h2>BRICK BY BRICK</h2>
+  <header class="puzzle-header">
+    <h1>CROSS-BRICK</h1>
+    <h2>Brick-based Crossword Puzzles</h2>
     <p class="instructions">
-        Rearrange this stack of bricks to form a crossword puzzle.
-        The clues will help you place the bricks in their correct places.
+      Rearrange the bricks to complete the crossword. Select or drag a brick, then tap or drop on the grid.
     </p>
-</header>
+    <div class="controls">
+      <button id="newPuzzleBtn">Random Puzzle</button>
+      <button id="clearBtn">Clear Board</button>
+      <button id="checkBtn">Check Answers</button>
+      <button id="revealBtn">Reveal Solution</button>
+      <button id="orientationBtn">Orientation: <span id="orientationLabel">Across</span></button>
+      <button id="darkModeBtn">Toggle Dark Mode</button>
+    </div>
+    <p class="status" id="statusMessage"></p>
+    <p class="stats"><strong>Puzzles solved:</strong> <span id="solvedCount">0</span></p>
+  </header>
 
-<main class="layout">
+  <main class="layout">
+    <section class="meta">
+      <div><strong>Puzzle:</strong> <span id="puzzleTitle"></span></div>
+      <div><strong>Difficulty:</strong> <span id="puzzleDifficulty"></span></div>
+    </section>
 
-    <!-- BRICKS -->
     <section class="bricks">
-        <h3>BRICKS</h3>
-        <div id="brickContainer" class="brick-grid"></div>
+      <h3>BRICKS</h3>
+      <p class="hint-text">Tap or drag a brick to place it. Orientation applies to placement.</p>
+      <div id="brickContainer" class="brick-grid"></div>
     </section>
 
-    <!-- CLUES -->
     <section class="clues">
-        <div class="clue-column">
-            <h3>ACROSS</h3>
-            <ol id="acrossList"></ol>
-        </div>
-
-        <div class="clue-column">
-            <h3>DOWN</h3>
-            <ol id="downList"></ol>
-        </div>
+      <div class="clue-column">
+        <h3>ACROSS</h3>
+        <ol id="acrossList"></ol>
+      </div>
+      <div class="clue-column">
+        <h3>DOWN</h3>
+        <ol id="downList"></ol>
+      </div>
     </section>
 
-    <!-- GRID -->
     <section class="grid-section">
-        <h3>DIAGRAM</h3>
-
-        <div class="grid">
-            <div class="col-numbers" id="colNumbers"></div>
-            <div id="gridContainer"></div>
-        </div>
+      <h3>DIAGRAM</h3>
+      <div class="grid">
+        <div class="col-numbers" id="colNumbers"></div>
+        <div id="gridContainer"></div>
+      </div>
     </section>
+  </main>
 
-</main>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
