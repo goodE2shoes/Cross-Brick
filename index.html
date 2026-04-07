@@ -1,20 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brick by Brick - Puzzle 131</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross‑Brick Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<h2>Puzzle 131 - Brick by Brick</h2>
+<header class="puzzle-header">
+    <h1>PUZZLE 131</h1>
+    <h2>BRICK BY BRICK</h2>
+    <p class="instructions">
+        Rearrange this stack of bricks to form a crossword puzzle.
+        The clues will help you place the bricks in their correct places.
+    </p>
+</header>
 
-<div id="board"></div>
+<main class="layout">
 
-<h3>Bricks</h3>
-<div id="bricks"></div>
+    <!-- BRICKS -->
+    <section class="bricks">
+        <h3>BRICKS</h3>
+        <div id="brickContainer" class="brick-grid"></div>
+    </section>
 
-<button onclick="check()">Check</button>
+    <!-- CLUES -->
+    <section class="clues">
+        <div class="clue-column">
+            <h3>ACROSS</h3>
+            <ol id="acrossList"></ol>
+        </div>
+
+        <div class="clue-column">
+            <h3>DOWN</h3>
+            <ol id="downList"></ol>
+        </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="grid-section">
+        <h3>DIAGRAM</h3>
+
+        <div class="grid">
+            <div class="col-numbers" id="colNumbers"></div>
+            <div id="gridContainer"></div>
+        </div>
+    </section>
+
+</main>
 
 <script src="app.js"></script>
 </body>
